@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+    font-style: normal;
+    /* font-family: "Lato", sans-serif; */
+        text-rendering: optimizeLegibility; 
+
+}
+
+html{
+    overflow-x: hidden;
+    max-width: 100vw;
+    color: #555;
+    font-size: 20px;
+    font-size: 240%;/*This will scale the text based on the screen which is super nice too*/
+    text-rendering: optimizeLegibility; 
+    word-spacing: 2px;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.header{
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0, 0, 0, 0.7)), url(Omnifood_Contents/hero.jpg);
+    /*THIS ALLOWS THE BACKGROUND TO BE DARKENED WHILE THE TEXT IS FINE */
+    /*i assume using white will do the opposite which is also helpful*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+   
+
+}
+
+.row{
+    max-width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+.logo{
+    height: 100px;
+    margin-top: 20px;
+    padding-left: 5vw;
+    width: auto;
+}
+.navigation{
+    margin-left: auto;
+    padding-right: 10vw;
+    margin-top: 40px;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+/* Base styles for navigation items (links) */
+.nav-items {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding-bottom: 8px;
+    /* Creates space for the animated underline without shifting text */
+    border-bottom: 2px solid transparent;
+    /* Sets the text size */
+    font-size: 1vw;
+    /* Adds space between navigation items */
+    margin-left: 2.5vw;
+    /* Sets the text color */
+    color: white;
+    /* Removes the default underline from links */
+    text-decoration: none;
+    /* Ensures proper vertical alignment within its container */
+    vertical-align: auto;
+    
+    /* --- Positioning Context for Pseudo-element --- */
+    /* Establishes a positioning context for the absolutely positioned ::after element */
+    position: relative;
+    /* Ensures the animated underline doesn't overflow and cause horizontal scrollbars */
+    overflow: hidden;
+}
+
+/* Creates the animated underline using a pseudo-element */
+.nav-items::after {
+    /* Necessary for pseudo-elements to appear */
+    content: "";
+    /* Positions the element relative to its nearest positioned ancestor (.nav-items) */
+    position: absolute;
+    /* Initially centers the underline's starting point */
+    left: 50%;
+    /* Anchors the line to the bottom of the navigation item */
+    bottom: 0;
+    /* Starts with zero width (invisible) */
+    width: 0;
+    /* Sets the thickness of the underline */
+    height: 2px;
+    /* Color of the animated underline */
+    background: #e67e22;
+    /* Smoothly animates all changed properties over 0.3 seconds with a custom easing function */
+    /* cubic-bezier allows a fluquating change of speed thoughout the transition */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Offsets the element by 50% of its own width to truly center it */
+    transform: translateX(-50%);
+}
+
+/* Animation trigger on hover */
+.nav-items:hover::after {
+    /* Expands the underline to full width of the navigation item */
+    width: 100%;
+    /* Keeps the animation originating from the center // although not needed */
+    left: 50%;
+    /* Maintains proper centering during and after the animation // not needed */
+    transform: translateX(-50%);
+}
+
+.nav-items a:link{
+    color: rgb(231, 231, 231);
+}
+.hero-text-box{
+    font-size: 60%;
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 50;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+}
+
+.btn:hover, .btn:active{
+    background-color: #cf6d17;
+}
+.btn-full{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+.btn-ghost{
+    border: 1px solid;
+    color: #e67e22;
+    transition: color 0.4s;
+
+}
+
+.btn-full:hover, .btn-full:active {
+    border: 1px solid #cf6d17;
+}
+.btn-ghost:hover, .btn-ghost:active{
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+h1{
+    font-weight: 50;
+}
+
+/* Assignment 7 addons */
+.body{
+    margin: 30px 0px;
+}
+
+p{
+    font-size: 18px;
+}
+
+h3{
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 100;
+}
+h2{
+    font-size: 100%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after{
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: " ";
+    margin: auto;
+    margin-top: 30px;
+}
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 100px;
+    --ionicon-stroke-width: 20px;
+}
+.body-title-text{
+    margin-bottom: 30px ;
+    font-size: 50%;
+    margin-left: 15%;
+}
+.body-title{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 103px;
+}
+
+.flex-container{
+    width: 100vw;
+    display: flex;
+    padding: 0 auto;
+    padding: 0 4%;
+}
+.flex-section{
+    margin: 1% 0 1% 1.6%;
+    padding: 1%;
+    display: block;
+    float: left;
+    width: 23.8%;
+
+}
+.flex-container:first-child {
+    margin-left: 0;
+}
+.icon{
+    color: #e67e22;
+    display: block;
+    margin-bottom: 10px;
+    --ionicon-stroke-width: 20px;
+    font-size: 65px;
+}
+
+.meal-photo-row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+.meal-photo{
+    /* this will be the div */
+    float: left;
+    width: 25%;
+    overflow: hidden;
+}
+.meal-photo-row img{
+    display: block;
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    margin: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.meal-photo-row img:hover{
+    opacity: 1;
+    transform: scale(1.00);
+}
+
+.btn-app:link, .btn-app:visited {
+    border: 0;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.HIW1{
+    background-color: #dfdfdf;
+    max-width: 100%;
+    display: flex;
+    padding:50px;
+    flex-direction: column;
+}
+.HIW-section1 {
+    display: flex;
+    flex: 1;
+    justify-content:flex-end;
+    width: 50%;
+
+}
+
+.HIW-section2 {
+    flex: 1;
+    display: flex;
+    margin-left: 10px;
+}
+
+.HIW-section2 p {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.HIW-section1 img{
+    width: 40%;
+}
+
+.circled{
+    font-size: 90%;
+    color: orange;
+    float: left;
+    padding: 10px 20px;
+    border: 5px solid orange;
+    border-radius: 100%;
+    /* display: inline-block; */
+}
+
+.HIW1 h2 {
+    padding-left: 200px;
+    /* padding-top: 80px; */
+    text-align: center;
+    width: 100%;
+}
+.HIW1 h2:after{
+    width: 140px;
+}
+
+ul.HIW-ul{
+    padding-left: 60px;
+    list-style-type: none;
+    text-overflow: clip;
+}
+
+ul.HIW-ul li{
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+    display: block;
+}
+
+li.HIW-li a{
+    height: 50px;
+    color: #dfdfdf;
+}
+
+li.HIW-li a img{
+    height: 50px;
+}
+li.HIW-li a:link{
+    color:#fff;
+}
+
+.places {
+    max-width: 95%;
+    display: flex;
+    margin-top: 100px;
+    margin: 0px auto;
+    flex-direction: column;
+}
+
+.places h2 {
+    margin-top: 80px;
+    width: 100%;
+    padding-left: 200px;
+    text-transform: uppercase;
+}
+
+.flexRow{
+    margin-left: 5%;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+}
+
+.flexItem{
+    margin: 10px;
+    flex: 1;
+}
+
+.cityName{
+    text-transform: uppercase;
+    font-size: 70%;
+    padding-bottom: 15px;
+}
+
+.flexItem img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.flexItem p{
+    padding-bottom: 4px;
+    text-transform: none;
+}
+
+.flexItem p a{
+    color: #e67e22;
+    text-decoration: none;
+    text-transform: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #cf6d17;
+}
+
+.flexItem p a:hover{
+    border-bottom: 0px;
+}
+
+.cityIcon {
+    float: left;
+    padding-right: 10px;
+    font-size: 18px;
+    color: #cf6d17;
+}
+
+.twitter{
+    transition: color 0.4s ease-in-out;
+
+}
+.twitter:hover{
+    color:rgb(68, 174, 255);
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    padding: 80px 0;
+}
+
+.lowered{
+    margin-top: 80px;
+}
+
+.rating{
+    background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0, 0, 0, 0.7)), url(Omnifood_Contents/back-customers.jpg);
+    padding: 80px 0px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+}
+
+.quoteRow {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0 100px;
+}
+
+.rating h2{
+    color: #fff;
+}
+
+.blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 70%;
+    position: relative;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.quoteText {
+    font-size: 50%;  
+    margin-bottom: 20px;  
+}
+
+.cite{
+    padding-top: 30px;
+    display: inline-block;
+    
+}
+
+.customerIcon {
+    border-radius: 100%;
+    padding: 10px 30px;
+    background-position: center;
+    background-size: contain;
+    font-size: 200%;
+}
+
+.customerImg{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-style: none;
+    overflow: clip;
+}
+
+.alberto{
+    background-image: url(Omnifood_Contents/customer-1.jpg);
+}
+
+.joana {
+    background-image: url(Omnifood_Contents/customer-2.jpg);
+}
+
+.milton{
+    background-image: url(Omnifood_Contents/customer-3.jpg);
+}
+
+.subscription{
+    padding: 80px 0;
+    background-color: #eaeaea;
+}
+
+.subscription h2{
+    color: #353535;
+}
+
+.subRow{
+    margin: 2%;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 0 10%;
+}
+
+.column {
+    background-color: #fff;
+    max-width: 20vw;
+    border-radius: 4px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.subTitle{
+    font-size: 22px;
+    display: block;
+    margin-bottom: 15px;    
+}
+.moneySize {
+    font-size: 60px;
+    display: block;
+    color: #e67e22;
+    font-weight: 100;
+}
+
+.monthText{
+    font-size: 22px;
+}
+
+.subscriptionItem {
+    padding: 15px;
+}
+.columnItem {
+    padding: 15px;
+    border-bottom: 1px solid #969494;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.columnItem span {
+    display: block;
+    padding: 2px 0;
+}
+
+.columnItem ion-icon {
+    padding-right: 10px;
+    color: #e67e22;
+}
+
+.columnItem_signup {
+    position:relative;
+    padding: 15px;
+    text-align: center;    
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+.feature ion-icon {
+    min-width: 20px;
+    font-size: 1.2em;
+    font-size: 15px;
+}
+.orange{
+    vertical-align: middle;
+}
+
+.empty{
+    color: #fff;
+}
+
+.bottom{
+    padding-top: 80px;
+    height: 120vh;
+    width: 100vw;
+    background-color: #f5f5f5;
+}
+
+.bottomBody{
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+input[type = text],
+input[type = email],
+select{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+
+
+input[type = checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline: none;
+} /* This will remove the black border when you touch the input box*/
+
+
+
+.row input{
+    font-size: 60%;
+    font-weight: 500;
+}
+
+.bottomTitle{
+    font-weight: 500;
+    width: 40%;
+    font-size: 60%;
+    margin: auto 0;
+}
+
+.bottomBody .row{
+    justify-content: start;
+    min-width: 100%;
+    margin-top: 20px;
+
+}
+
+.row label{
+    padding-right: 30px;
+    float: left;
+}
+
+select{
+    font-size: large;
+}
+
+
+#newsletterTag{
+    width: 29%;
+}
+.checkbox{
+    width: 70%;
+}
+
+.checkboxText{
+    font-size: 80%;
+}
+
+.bottomBtn{
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 28%;
+}
+textarea {
+    font-size: 60%;
+    width: 100%;          /* don't lock to container width */
+    height: 100px; /*initial height*/
+    padding: 7px; /*internal textbox padding*/
+    box-sizing: content-box; /* so padding doesn't affect the resized content width */
+}
+.seeYouRow {
+    margin-top: 20px;
+    display: flex; /* Enables flexbox layout */
+    width: 100%;
+    overflow: visible; /* allow children (textarea) to expand beyond this container */
+}
+.right-section {
+      flex-grow: 1; /* Allows the right panel to take up remaining space */
+      display: flex; /* Use flexbox for the textarea within */
+      overflow: visible; /* allow horizontal expansion without internal scrollbars */
+      max-width: none;
+}
+.left-section h3{
+    font-weight: 500;
+    font-size: 60%;
+    margin-top: 5%;
+}
+
+.left-section {
+    width: 29%; /* Fixed width for the left panel */
+    flex-shrink: 0; /* Prevents shrinking */
+    /* Add styling for the left panel */
+}
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+    width: 100vw;
+    float: left;
+}
+
+.footer-row{
+    font-size: 16px;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+    display: block;
+    width: 100%;
+    background-color: #333;
+}
+
+.footer-nav{
+    display: flex;
+    list-style: none;
+    float: left;
+    justify-content: space-around;
+    width: fit-content;
+    font-size: 120%;
+    width: 30%;
+}
+
+.footer-nav li {
+    display: inline-block;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    color: #888;
+    transition: color 0.2s ease-in-out; /* VERY IMPORTANT: putting it here will make it apply the ease out after i let it go*/
+}
+.footer-nav li a:hover{
+    color: #ddd;
+}
+
+.icon-navBar{
+    display: flex;
+    list-style: none;
+    width: fit-content;
+    margin-top: 10px;
+    float: inline-end;
+    font-size: 200%;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.icon-navBar li {
+    display: inline-block;
+}
+
+.icon-navBar li a{
+    padding-left: calc(10% + 40px);
+    text-decoration: none;
+    color: #888;
+    transition: color 0.2s ease-in-out; /* VERY IMPORTANT: putting it here will make it apply the ease out after i let it go*/
+}
+
+.facebook, .google, .insta{/*main class*/
+    transition: color 0.4s ease-in-out;;
+}
+
+.facebook:hover{/* the color will be applied after the hover condition */
+    color: #3b5998;
+}
+
+.google:hover{
+    color: #dd4b39;
+}
+
+.insta:hover{
+    color: #ee2a7b;
+}
+
+.copyright{
+    text-align: center;
+    color: #888;
+    font-size: 60%;
+}

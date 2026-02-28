@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="testStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="rowBanner">
+            <section class="logo-section">
+                <div class="image-div"></div>
+                <h3 class="myName">Juan V.</h3>
+
+            </section>
+
+            <section class="bannerNavigaion">
+                <a href="test.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#project">Projects</a>
+                <a href="#contact">Contact</a>
+            </section>
+        </header>
+        <div class="extend">
+            <section class="welcome">
+                <h1 class="welcomeTitle">Hello Everyone, my name is Juan Vasquez</h1>
+                <br>
+                <p class="welcomeText">
+                    I am a Freshman / Early Enroller of Thaddeus Stevens of Technology. The major I am going for is Computer Software Engineering Technology (CSET).
+                </p>
+                <a href="" class="btn">
+                    project
+                </a>
+                <!-- <button class="projectBtn" onclick="greet()">
+                    <p>project</p>
+                </button> -->
+            </section>
+        </div>
+        <section class="aboutMeContainer" >
+            <h2 id="about">About Me</h2>
+            <div class="twoSectionGrid">
+                <section>
+                    <h3 class="sectionTitle">Who am I?</h3>
+                    <p class= "sectionText">Hello, my name is Juan J. Vasquez. I am a Freshman attending<strong> Thaddeus Stevens College of Technology</strong> in Lancaster. I've involved myself a lot in high school  </p>
+                    <a href="#" class="btn aboutMeBtn">contact</a>
+                </section>
+                <section>
+                    <h3 class="sectionTitle">Personal Skills</h3>
+                    <div class="skillContainer ">
+                        <div class="skill">Java</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">Python</div>
+                        <div class="skill">MAYA Autodesk</div>
+                        <div class="skill">Unreal Engine 5</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="projectContainer">
+            <h2 id="project">Projects</h2>
+            <p class="topicDescription projectDiscription">This will encompass all projects thoughout the first semester of my freshman year.</p>
+            <div class="projectRow">
+                <img src="assets/jpeg/project-mockup-example.jpeg" alt="" class="projectRow-img">
+                <div>
+                    <h3 class="sectionTitle">Project 1: HTML / CSS Assignments</h3>
+                    <p class="sectionText">These are projects in which I use CSS to style HTML projects 
+                        <br> 
+                        <br>
+                    Click this button to see my Projects!</p>
+                    <a href="assets/files/omniFood.html" target="_blank" class="btn aboutMeBtn"> HTML / CSS Projects</a>
+                    <!-- target="_blank" this will open a new tab with the herf link -->
+                </div>
+            </div>
+            <div class="projectRow">
+                <img src="assets/jpeg/project-mockup-example.jpeg" alt="" class="projectRow-img">
+                <div>
+                    <h3 class="sectionTitle">Project 2: JavaScript Assignments</h3>
+                    <p class="sectionText">These are projects in which I use JavaScript to acomplish a given task.  
+                        <br> 
+                        <br>
+                    Click this button to see my Projects!</p>
+                    <a href="#" class="btn aboutMeBtn">JavaScript Projects</a>
+                </div>
+            </div>
+
+            <div class="projectRow">
+                <img src="assets/jpeg/project-mockup-example.jpeg" alt="" class="projectRow-img">
+                <div>
+                    <h3 class="sectionTitle">Project 3: MayaAutodesk </h3>
+                    <p class="sectionText">These are projects During my high school curriculum in which I use Maya to create scenes, models and animations. 
+                        <br> 
+                        <br>
+                    Click this button to see my Projects!</p>
+                    <a href="#" class="btn aboutMeBtn">Maya AutoDesk Projects</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contactContainer">
+            <section class="mainContactSection">
+                <h2 class="contactTitle">Contact</h2>
+                <p class="topicDescription">Enter your information here,
+                    so I can cantact you at a later date.</p>
+                <section class="contactBody">
+                    <div class="contactFeild">
+                        <label for="name" class="contactLabel">Name</label>
+                        <input type="text" placeholder="Enter Your Name" name="name" id="name" class="contactInput">
+                    </div>
+                    <div class="contactFeild">
+                        <label for="Email" class="contactLabel">Email</label>
+                        <input type="text" placeholder="Enter Your Email" name="name" id="name" class="contactInput">
+                    </div>
+                    <div class="contactFeild">
+                        <label for="name" class="contactLabel">Name</label>
+                        <textarea name="" placeholder="Enter Your Message" id="" class="contactInput"></textarea>
+                    </div>
+                    <a href="#" class="btn aboutMeBtn">Submit</a>
+                </section>
+            </section>
+        </section>
+        <footer>
+            <section class="footerRow">
+                <section>
+                    <h4>Juan Vasquez</h4>
+                    <p class="footerDescription">Short Descriptiton</p>
+                </section>
+                <section class="footerSection2">
+                    <h6 class="socialTitle upper">Social</h6>
+                    <ul class="icon-navBar" >
+                        <li><a href="#"><ion-icon name="logo-linkedin" class="blueIcon"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-github" class="blueIcon"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter" class="twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-youtube" class="youtube"></ion-icon></a></li>
+                        <li><a href="#"class="insta"><ion-icon name="logo-instagram" ></ion-icon></a></li>
+                    </ul>
+                </section>
+            </section>
+            <section class="finalRow">
+                <p class="finalRowText">Created by Juan Vasquez, Original by <a href="#" class="authorName">Ram Maheshwari</a></p>
+            </section>
+
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    <!-- <script>
+        function greet() {
+            alert("Hello!");
+        }
+    </script> -->
+</html>
