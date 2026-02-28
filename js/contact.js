@@ -49,7 +49,7 @@ if (form) {
 
     emailjs.send(
       "service_fydgqkf",
-      "template_hdf13jd",
+      "template_1qsyj48",
       templateParams
     )
     .then(function() {
