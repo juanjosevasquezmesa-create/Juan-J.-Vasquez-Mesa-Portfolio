@@ -4,22 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Jose | Portfolio</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
+  <!-- ================= HEADER ================= -->
   <header class="header">
     <div class="container nav-container">
       <h1 class="logo">Juan<span>.</span></h1>
 
       <nav class="nav">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact" class="btn-nav">Contact</a></li>
+          <li><a class="nav-btn" href="#about">About</a></li>
+          <li><a class="nav-btn" href="#projects">Projects</a></li>
+          <li><a class="nav-btn" href="#skills">Skills</a></li>
+          <!-- Contact now styled the same -->
+          <li><a class="nav-btn" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -27,88 +28,76 @@
     </div>
   </header>
 
-  <!-- main heading -->
+
+  <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="container hero-content">
-      <h2>Hello, I'm Juan 👋</h2>
+      <h2>Hello, I'm Juan</h2>
       <p>Computer Science Student | Developer | Problem Solver</p>
       <a href="#projects" class="btn-primary">View My Work</a>
     </div>
   </section>
 
-  <!-- about me section -->
+
+  <!-- ================= ABOUT ================= -->
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
 
       <div class="card fade-in">
         <p>
-          I'm passionate about building clean, efficient, and responsive web applications.
-          Interested in working together? Send me a message below.
+          I'm passionate about building clean, responsive, and efficient
+          web applications. Below are some of my favorite projects.
         </p>
-
-        <form id="contact-form" class="contact-form">
-
-          <!-- Honeypot Spam Field -->
-          <input type="text" id="company" style="display:none" />
-
-          <div class="input-group">
-            <input type="text" id="name" required />
-            <label>Name</label>
-          </div>
-
-          <div class="input-group">
-            <input type="email" id="email" required />
-            <label>Email</label>
-          </div>
-
-          <div class="input-group">
-            <textarea id="message" rows="4" required></textarea>
-            <label>Message</label>
-          </div>
-
-          <button type="submit" class="btn-primary" id="submit-btn">
-            <span id="btn-text">Contact Me</span>
-            <span id="spinner" class="spinner"></span>
-          </button>
-
-          <p id="form-status"></p>
-
-        </form>
       </div>
     </div>
   </section>
 
-  <!-- projects -->
+
+  <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section alt-section">
     <div class="container">
       <h2 class="section-title">Projects</h2>
 
       <div class="projects-grid">
 
+        <!-- OmniFood as its own website -->
         <div class="project-card fade-in">
           <h3>OmniFood Website</h3>
-          <p>Responsive landing page built with HTML & CSS.</p>
-          <a href="#" class="btn-secondary">View Project</a>
+          <p>Fully responsive landing page built with HTML & CSS.</p>
+
+          <a href="assets/files/index.html"
+             target="_blank"
+             class="btn-secondary">
+            Open Website
+          </a>
         </div>
 
+
+        <!-- Java Project Placeholder -->
+        <div class="project-card fade-in">
+          <h3>Java Application</h3>
+          <p>Desktop application built in Java (preview below).</p>
+
+          <div class="project-preview">
+            Java project preview coming soon...
+          </div>
+        </div>
+
+
+        <!-- Another Project -->
         <div class="project-card fade-in">
           <h3>SQL Employee Database</h3>
           <p>Advanced queries using JOIN, GROUP BY, and data analysis.</p>
-          <a href="#" class="btn-secondary">View Project</a>
-        </div>
-
-        <div class="project-card fade-in">
-          <h3>Password Hashing System</h3>
-          <p>Secure login simulation using modern hashing techniques.</p>
-          <a href="#" class="btn-secondary">View Project</a>
+          <a href="#" class="btn-secondary">View Code</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- skill section -->
+
+  <!-- ================= SKILLS ================= -->
   <section id="skills" class="section">
     <div class="container">
       <h2 class="section-title">Skills</h2>
@@ -120,21 +109,73 @@
         <div class="skill">Python</div>
         <div class="skill">MySQL</div>
         <div class="skill">Git</div>
+        <div class="skill">Java</div>
       </div>
     </div>
   </section>
 
-  
-  <!-- add icons that send the user to my socials and  -->
-  <footer> 
-    <p>© 2026 Juan Jose Vasquez Mesa. Created with HTML, CSS, and JavaScript.</p>
+
+  <!-- ================= CONTACT (MOVED LOWER) ================= -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+
+      <form id="contact-form" class="contact-form">
+
+        <div class="input-group">
+          <input
+            class="input"
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="off"
+            required
+          />
+          <label class="user-label">Name</label>
+        </div>
+
+        <div class="input-group">
+          <input
+            class="input"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="off"
+            required
+          />
+          <label class="user-label">Email</label>
+        </div>
+
+        <div class="input-group">
+          <textarea
+            class="input"
+            id="message"
+            name="message"
+            rows="4"
+            required
+          ></textarea>
+          <label class="user-label">Message</label>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Contact Me
+        </button>
+
+        <p id="form-status"></p>
+
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 Juan Jose. Built with passion.</p>
   </footer>
 
 
-  <!-- EmailJS CDN (Must Load First) -->
+  <!-- ================= SCRIPTS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-  <!-- JS Files -->
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
 
